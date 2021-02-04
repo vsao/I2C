@@ -12,4 +12,4 @@ Each component in I2C bus is software addressable by a unique address, this uniq
 Always a master and slave relationships exist at all times in I2C. 
 In I2C, communication is started by the master. 
 The master can send data to a slave or receive data from a slave - slaves do not transfer data between themselves.
-I2C is the 8-bit oriented serial bidirectional communication, there are following speed mode in I2C 
+I2C is the 8-bit oriented serial bidirectional communication, there are following speed mode in I2C
