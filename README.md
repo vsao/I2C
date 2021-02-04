@@ -15,7 +15,7 @@ Features of I2C protocol:
 - I2C is the 8-bit oriented serial bidirectional communication, there are following speed mode in I2C.
 
 |  MODE            | SPEED         |
-|------------------|---------------|
+|:------------------:|:---------------:|
 | Standard-mode    | 100 Kbit/s    |   
 | Fast-mode        | 400 Kbit/s    |
 | Fast-mode Plus   | 1 Mbit/s      |
