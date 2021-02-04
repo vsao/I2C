@@ -14,12 +14,12 @@ Features of I2C protocol:
 - The master can send data to a slave or receive data from a slave - slaves do not transfer data between themselves.
 - I2C is the 8-bit oriented serial bidirectional communication, there are following speed mode in I2C.
 
-|  MODE            | SPEED         |
-|------------------|---------------|
-| Standard-mode    | 100 Kbit/s    |   
-| Fast-mode        | 400 Kbit/s    |
-| Fast-mode Plus   | 1 Mbit/s      |
-| High-speed mode  | 3.4 Mbit/s    |
+                            |  MODE            | SPEED         |
+                            |------------------|---------------|
+                            | Standard-mode    | 100 Kbit/s    |   
+                            | Fast-mode        | 400 Kbit/s    |
+                            | Fast-mode Plus   | 1 Mbit/s      |
+                            | High-speed mode  | 3.4 Mbit/s    |
 
 Table 1: I2C Speed Modes
 
