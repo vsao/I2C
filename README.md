@@ -72,7 +72,7 @@ The shift registers constitute the most important circuit for I2C protocol imple
 
 This is a 5-bit synchronous up-counter that starts counting only when “start” condition is satisfied and counts till a “stop” condition occurs. It can count from 0 to 31 in binary number system.Its outputs are fed to the I2C comparator which is used to generate essential signals such as “en_address”, “en_data” etc. This counter is fed with the “SCL” as its clock along with necessary logic that turns it on only when “start” occurs.
 
-|<img title="I2C Counter" src="images/Counter.jpg" width="1000" length="600">|
+|<img title="I2C Counter" src="images/Counter.jpg" width="700" length="700">|
 |:--:| 
 |*Figure 6: Schematic diagram of 5 bit synchronous up counter*|
 
@@ -85,7 +85,7 @@ The I2C chip comparator is a circuit that is used to generate various signals wh
 - en_latch_enable: This signal is used in the generation of the “EN” signal. It is given to the “en” pin of the latch used in the “enable controller” circuit. It is generated at the 6th clock cycle.
 - ack9_18: These are the signals that are used to give the acknowledgement bits at the 9th and 18th clock cycles. Here 2 NAND gates are used to generate logic 0 at 9th and 18th clock cycles. The outputs of both the NAND gates are given to an AND gate whose output is fed to the enable controller with a necessary delay of 16 ns which is the difference between the edges of SDA and SCL.
 
-|<img title="I2C Comparator" src="images/Comparator.jpg" width="600" length="600">|
+|<img title="I2C Comparator" src="images/Comparator.jpg" width="800" length="800">|
 |:--:| 
 |*Figure 7: Schematic diagram of I2C comparator*|
 
