@@ -90,7 +90,7 @@ The I2C latch circuit consists of 3 units: Address Latch, Data Latch and R/WB La
 
 - R/WB Latch: The R/WB bit is the 8th bit of the SDA. It is stored along with the address. This has only one D-FF whose output is also connected to its input through a 2:1 MUX. The selection line of this MUX is also connected to the “en_address”.
 
-<img title="I2C Latch" src="images/I2C_Latch.jpg" width="900" length="900"> 
+<img title="I2C Latch" src="images/I2C_Latch.jpg" width="600" length="600"> 
 
 ## Circuit Simulation
 
@@ -98,7 +98,7 @@ For testing the circuit we used pull-up resistors having 100 Ohm resistance for 
 Using the Cadence Virtuoso software, the circuit was simulated. In order to simulate the operation, we used an 8-bit data, “11001100”. First this data was written into the slave, during which the “R/WB” bit was kept low. Then within the same frame, the data was also read from the slave during which the” R/WB bit” was kept high. For a proper simulation, we used a transient analysis of 50 microseconds. The result is shown in the figure below.
 
 
-<img title="Circuit Simulation" src="images/Sim_Result.jpg" width="900" length="900">
+<img title="Circuit Simulation" src="images/Sim_Result.png" width="900" length="900">
 
 ## Layout Design
 
