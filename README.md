@@ -72,7 +72,7 @@ The shift registers constitute the most important circuit for I2C protocol imple
 
 This is a 5-bit synchronous up-counter that starts counting only when “start” condition is satisfied and counts till a “stop” condition occurs. It can count from 0 to 31 in binary number system.Its outputs are fed to the I2C comparator which is used to generate essential signals such as “en_address”, “en_data” etc. This counter is fed with the “SCL” as its clock along with necessary logic that turns it on only when “start” occurs.
 
-|<img title="I2C Counter" src="images/Counter.jpg">|
+|<img title="I2C Counter" src="images/Counter.jpg" width="900" length="900">|
 |:--:| 
 |*Figure 6: Schematic diagram of 5 bit synchronous up counter*|
 
