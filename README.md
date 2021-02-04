@@ -34,13 +34,17 @@ This design describes a simple circuitry which writes data in a data latch and r
 In the case of a “write” operation, the R/WB bit is kept low. In this operation, the master circuit is supposed to send the data bits along with the address bits. Hence, after the address bits are received and latched into the address latch circuit, the following data bits move into the first set of (SIPO) shift-registers. From this set of shift registers, the data is sent into the data latch and with help of “en_data”, the data is latched into the data latch circuit.
 
 
-<img title="Write Timing Diagram" src="images/TD_Write.jpg" width="800" length="800"> 
+<img title="Write Timing Diagram" src="images/TD_Write.jpg" width="900" length="900"> 
 
 ## Read Operation
 
 In case of a read operation, the R/WB bit is kept high. With the help of the mux_en signal, the second set of (PISO) shift registers are activated in case of read operation, as soon as the R/WB bit is received. The second set of shift registers receive data bits from the data latch and with each clock cycle, shift the data bits into the “SDA_OUT” line. The “SDA_OUT” is subsequently, with help of the “Enable Controller” circuit and the PAD, tri-stated into the SDA signal.
 
-<img title="Read Timing Diagram" src="images/TD_Read.jpg" width="800" length="800"> 
+<img title="Read Timing Diagram" src="images/TD_Read.jpg" width="900" length="900"> 
 
+## The start and stop circuit
 
+For the start condition to occur, the SDA needs to be pulled low while the SCL remains high. As mentioned earlier, the time period of SCL is 1 micron while that of SDA is 2 micron. In this case, the Vbit source for SCL is given a delay of 1.5 microns. The Vbit for SDA is given as 1 micron. This makes it possible for the SDA to be pulled low while SCL remains high as shown in Figure II.2. An additional delay of 16 ns is given so that the SDA bits change while the SCL remains low, i.e. a low level triggered operation.
+
+<img title="The start and stop circuit" src="images/Start_Stop.jpg" width="900" length="900"> 
 
