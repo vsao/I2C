@@ -20,8 +20,10 @@ Features of I2C protocol:
 | Fast-mode        | 400 Kbit/s    |
 | Fast-mode Plus   | 1 Mbit/s      |
 | High-speed mode  | 3.4 Mbit/s    |
+|:--:| 
+|*Table 1: I2C Speed Modes*|
 
-Table 1: I2C Speed Modes
+
 
 ## Circuit Design
 
