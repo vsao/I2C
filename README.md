@@ -29,7 +29,7 @@ This design describes a simple circuitry which writes data in a data latch and r
 
 |<img title="Master Slave Configuration" src="images/Master_Slave.jpg">|  
 |:--:| 
-| *Figure 1: I2C Master-Slave configuration*|
+|*Figure 1: I2C Master-Slave configuration*|
                                                                  
 
 ## Write Operation
@@ -37,13 +37,17 @@ This design describes a simple circuitry which writes data in a data latch and r
 In the case of a “write” operation, the R/WB bit is kept low. In this operation, the master circuit is supposed to send the data bits along with the address bits. Hence, after the address bits are received and latched into the address latch circuit, the following data bits move into the first set of (SIPO) shift-registers. From this set of shift registers, the data is sent into the data latch and with help of “en_data”, the data is latched into the data latch circuit.
 
 
-<img title="Write Timing Diagram" src="images/TD_Write.jpg" width="900" length="900"> 
+|<img title="Write Timing Diagram" src="images/TD_Write.jpg" width="900" length="900">|
+|:--:| 
+|*Figure 2: Timing diagram for write operation*|
 
 ## Read Operation
 
 In case of a read operation, the R/WB bit is kept high. With the help of the mux_en signal, the second set of (PISO) shift registers are activated in case of read operation, as soon as the R/WB bit is received. The second set of shift registers receive data bits from the data latch and with each clock cycle, shift the data bits into the “SDA_OUT” line. The “SDA_OUT” is subsequently, with help of the “Enable Controller” circuit and the PAD, tri-stated into the SDA signal.
 
-<img title="Read Timing Diagram" src="images/TD_Read.jpg" width="900" length="900"> 
+|<img title="Read Timing Diagram" src="images/TD_Read.jpg" width="900" length="900">|
+|:--:| 
+|*Figure 3: Timing diagram for read operation*|
 
 ## The start and stop circuit
 
