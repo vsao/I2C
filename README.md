@@ -1,9 +1,9 @@
 # Design of inter integrated circuit (I2C) in 0.6um CMOS
 
-# Abstract
+## Abstract
 This article describes the detailed design and implementation of I2C slave circuitry for write and read operations from a latch unit, implemented in a 0.6μm CMOS technology. For the purpose of demonstration, the I2C circuit was designed and fabricated in 0.6µm CMOS technology.
 
-# Introduction
+## Introduction
 An I2C protocol is one of the serial communication protocols that are used for chip to chip communication. Similar to the I2C protocol, SPI and UART are also used for chip to chip communication. The I2C is the short form of Inter-Integrated Circuit, a type of bus, which was designed and developed by Philips in 1980 for inter-chip communication. I2C is adopted by a lot of vendor companies for the chip to chip communication.
 
 Features of I2C protocol:
@@ -53,7 +53,7 @@ For the start condition to occur, the SDA needs to be pulled low while the SCL r
 The shift registers constitute the most important circuit for I2C protocol implementation. The shift registers are made up of D Flip-flops. Here, we are using two sets of 8-bit shift registers, where one set is of resettable positive edge triggered D-FFs and the other is a set of 8-bit negative edge D-FFs. The first set of positive edge D-FFs are used as a SIPO register to retrieve the slave address as well as the data sent by the master in case of a write operation. The external “RESETN” signal is fed to the “RESET” of the D-FFs. The output of the first shift register is taken from the pins QA7 to QA0. These pins are connected to the latching circuit where the address, input data (for write operation) and the R/WB(read-write bit) is stored. The second set of negative edge D-FFs is used as a PISO shift register. Here, the data read by the slave from data latch which is fed in a parallel manner and the output is taken serially. However the serial output of this shift register needs to be put on the SDA signal in case of read operation. This is done by tri-stating the signal with the input SDA signal using a PAD that acts as a tristate buffer.
 
 
-<img title="I2C Shift Registers" src="images/ShiftReg.jpg" width="900" length="900"> 
+<img title="I2C Shift Registers" src="images/ShiftReg.jpg"> 
 
 ## 5 bit synchronous up counter
 
@@ -68,7 +68,7 @@ The I2C chip comparator is a circuit that is used to generate various signals wh
 - en_latch_enable: This signal is used in the generation of the “EN” signal. It is given to the “en” pin of the latch used in the “enable controller” circuit. It is generated at the 6th clock cycle.
 - ack9_18: These are the signals that are used to give the acknowledgement bits at the 9th and 18th clock cycles. Here 2 NAND gates are used to generate logic 0 at 9th and 18th clock cycles. The outputs of both the NAND gates are given to an AND gate whose output is fed to the enable controller with a necessary delay of 16 ns which is the difference between the edges of SDA and SCL.
 
-<img title="I2C Comparator" src="images/Comparator.jpg" width="900" length="900"> 
+<img title="I2C Comparator" src="images/Comparator.jpg" width="600" length="600"> 
 
 ## I2C Enable Controller
 
@@ -78,7 +78,7 @@ After the address is passed, the enable signal is pulled low with the help of a 
 After that the R/WB bit is analyzed and if it is a read, the “SDA_OUT” signal, which is the output of the 2nd shift register set, is put on the “EN”. If the operation is a write, the “EN” signal is made logic 1. In this way the SDA signal is tri-stated using a BBC1P PAD as shown in Figure II.1.  
 
 
-<img title="I2C Enable controller" src="images/Enable_Controller.jpg" width="900" length="900"> 
+<img title="I2C Enable controller" src="images/Enable_Controller.jpg" width="600" length="600"> 
 
 ## I2C Latch
 
@@ -98,7 +98,7 @@ For testing the circuit we used pull-up resistors having 100 Ohm resistance for 
 Using the Cadence Virtuoso software, the circuit was simulated. In order to simulate the operation, we used an 8-bit data, “11001100”. First this data was written into the slave, during which the “R/WB” bit was kept low. Then within the same frame, the data was also read from the slave during which the” R/WB bit” was kept high. For a proper simulation, we used a transient analysis of 50 microseconds. The result is shown in the figure below.
 
 
-<img title="Circuit Simulation" src="images/Sim_Result.png" width="900" length="900">
+<img title="Circuit Simulation" src="images/Sim_Result.png">
 
 ## Layout Design
 
@@ -107,7 +107,7 @@ i. Design Rule Checking (DRC)
 ii. Layout v/s Schematic (LVS)  
 iii. Electronic Rule Checking (ERC)  
 
-<img title="Layout Design" src="images/I2C_Layout.jpg" width="900" length="900">
+<img title="Layout Design" src="images/I2C_Layout.jpg">
 
 ## Conclusions
 
