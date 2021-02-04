@@ -85,7 +85,7 @@ The I2C chip comparator is a circuit that is used to generate various signals wh
 - en_latch_enable: This signal is used in the generation of the “EN” signal. It is given to the “en” pin of the latch used in the “enable controller” circuit. It is generated at the 6th clock cycle.
 - ack9_18: These are the signals that are used to give the acknowledgement bits at the 9th and 18th clock cycles. Here 2 NAND gates are used to generate logic 0 at 9th and 18th clock cycles. The outputs of both the NAND gates are given to an AND gate whose output is fed to the enable controller with a necessary delay of 16 ns which is the difference between the edges of SDA and SCL.
 
-|<img title="I2C Comparator" src="images/Comparator.jpg" width="800" length="800">|
+|<img title="I2C Comparator" src="images/Comparator.jpg" width="700" length="700">|
 |:--:| 
 |*Figure 7: Schematic diagram of I2C comparator*|
 
