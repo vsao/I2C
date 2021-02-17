@@ -151,5 +151,5 @@ We would like to thank our institution for equipping us with Advanced VLSI Lab f
 [2] "Financial Press Releases-NXP". investors.nxp.com. Retrieved 2018-04-29.  
 [3] "Benefits of Power Supplies Equipped with I2C Ethernet Communications". Aegis Power Systems, Inc. Aegis Power Systems, Inc. Archived from the original on 2015-12-21. Retrieved 2015-12-21.  
 [4] "I2C-bus specification and user manual" (PDF). Rev.  
-6. NXP. 2014-04-04. UM10204. Archived (PDF) from the original on 2013-05-11.  
-[5] "7-bit, 8-bit, and 10-bit I2C Slave Addressing". Total Phase. Archived from the original on 2013- 06-01. Retrieved 2018-04-29.  
+[5] NXP. 2014-04-04. UM10204. Archived (PDF) from the original on 2013-05-11.  
+[6] "7-bit, 8-bit, and 10-bit I2C Slave Addressing". Total Phase. Archived from the original on 2013- 06-01. Retrieved 2018-04-29.  
