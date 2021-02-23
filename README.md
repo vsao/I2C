@@ -143,7 +143,7 @@ This article describes the design of I2C slave circuitry for write and read oper
 
 ## Acknowledgement
 
-We would like to thank our institution for equipping us with Advanced VLSI Lab facilities to successfully execute our project. We are also grateful to our mentor, Dr. Saroj Rout [](linkedin.com/in/sroutk) for his constant advice and guidance throughout the project duration.
+We would like to thank our institution for equipping us with Advanced VLSI Lab facilities to successfully execute our project. We are also grateful to our mentor,  [Dr. Saroj Rout](linkedin.com/in/sroutk) for his constant advice and guidance throughout the project duration.
 
 ## References
 
