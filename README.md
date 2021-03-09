@@ -142,7 +142,7 @@ iii. Electronic Rule Checking (ERC)
 This article describes the design of I2C slave circuitry for write and read operations from a latch unit, implemented in a 0.6μm CMOS technology. Using the Cadence Virtuoso and Cadence Assura design tools, we were able to test and verify the timing diagrams and layout connections of the same. The fast plus mode of I2C having a 1MHz clock was implemented with a single master and single slave having a 7-bit address, both the read and write operations were executed successfully.
 
 ## Contributor
-[Anshuman Mishra](https://github.com/anshumanm329)
+ - [Anshuman Mishra](https://github.com/anshumanm329)
 
 ## Acknowledgement
 
